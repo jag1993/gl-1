@@ -48,7 +48,7 @@ nightmare
 	.wait(5000)
 	.evaluate(()=>{
 		var result = {};
-		 $('.uvc-overevent').each(function(i, element) {
+		 $('.uvc-overevent').each(function() {
         		var dataId = $(this).attr('data-id');
         		var dataDate = $(this).attr('data-date');
         		var eventData = {
@@ -64,13 +64,15 @@ nightmare
 	})
 	.end()
 	.then((data)=>{
-		for(var key in data){
-			nightmare
-				.goto('http://www.draisbeachclub.com/uvtix/index.html?id='+data[key].dataId+'&date='+data[key].dataDate)
-				.wait(5000)
-				.end()
-		}
+		console.log(data);
+		// for(var key in data){
+		// 	nightmare
+		// 		.goto('http://www.draisbeachclub.com/uvtix/index.html?id='+data[key].dataId+'&date='+data[key].dataDate)
+		// 		.wait(5000)
+		// 		.end()
+		// }
 	})
+
 
 
 
