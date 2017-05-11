@@ -22,7 +22,7 @@ function scrapeTicketUrlData(callback){
     .goto('http://www.taolasvegas.com/nightclub/')
     .evaluate(function(){
       //var arrayOfLinks = document.querySelectorAll('a.tickets');
-      var arrayOfLinks = document.querySelectorAll('.owl-stage .owl-item .list-view-item a');
+      var arrayOfLinks = document.querySelectorAll('.ticket-price .primary-link .tickets');
       var arrayOfLinksHREF = [];
       
       arrayOfLinks.forEach(function(data){
@@ -46,7 +46,7 @@ function scrapeTicketPricingData(arrayOfLinksHREF,callback){
   //console.log(arrayOfLinksHREF);
   //document.querySelector('.product-0 .quantity p .plus') <---SELECT PLUS  
     function pageToPage(url,callback){
-      console.log(`${url} PAGE TO PAGE FUNC`);
+      //console.log(`${url} PAGE TO PAGE FUNC`);
       callback(null);
     }
 
